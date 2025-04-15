@@ -1,0 +1,106 @@
+:root {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-hover: #21262d;
+    --text-primary: #c9d1d9;
+    --text-hover: #58a6ff;
+    --accent: #1f6feb;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    border-right: 1px solid #30363d;
+}
+
+.navbar {
+    height: 56px;
+    background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid #30363d;
+}
+
+    .navbar a {
+        color: var(--text-hover);
+        text-decoration: none;
+        margin-left: auto;
+    }
+
+.nav-scrollable {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: background 0.2s ease-in-out;
+    border-radius: 6px;
+    margin: 0 1rem;
+}
+
+    .nav-link.active,
+    .nav-link:hover {
+        background-color: var(--bg-hover);
+        color: var(--text-hover);
+    }
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: var(--bg-primary);
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 0.5rem;
+    color: var(--text-primary);
+    margin-right: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Botão */
+button {
+    background-color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #388bfd;
+    }
