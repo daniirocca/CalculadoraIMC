@@ -25,11 +25,6 @@
     <li>HTML e CSS personalizados (Dark Theme)</li>
 </ul>
 
-<h3> Próximas melhorias (ideias)</h3>
-<ul>
-    <li>Exibir classificação do IMC (ex: "normal", "sobrepeso", "obesidade")</li>
-</ul>
-
 <p>
     Este projeto tem fins educacionais e demonstra o potencial do Blazor para desenvolvimento de aplicações web modernas, com C# rodando diretamente no navegador (via WebAssembly) ou no servidor.
 </p>

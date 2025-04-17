@@ -1,23 +1,66 @@
-﻿@page "/imc"
+﻿<h1>Calculadora de IMC</h1>
 
-<h1>Calculador de Imc</h1>
+<div class="formulario">
+    <label>Altura (em metros):</label>
+    <input type="number" @bind="altura" step="0.01" min="0" />
 
-<label for="altura">Altura (em metros)</label>
-<input @bind="Altura" type="number" />
+    <label>Peso (em kg):</label>
+    <input type="number" @bind="peso" step="0.1" min="0" />
 
-<label for="peso">Peso (em quilogramas)</label>
-<input @bind="Peso" type="number" />
+    <button @onclick="CalcularIMC">Calcular</button>
+</div>
 
-<button @onclick="CalcularImc">Calcular IMC</button>
-<label>O IMC é <span>@ImcCalculado</span></label>
+@if (resultadoIMC != null)
+{
+    <div class="resultado">
+        <p><strong>IMC:</strong> @resultadoIMC.Value.ToString("0.00")</p>
+        <p style="color:@CorClassificacao(classificacao)">
+            <strong>Classificação:</strong> @classificacao
+        </p>
+    </div>
+}
 
 @code {
-    private double Altura { get; set; }
-    private double Peso { get; set; }
-    private double ImcCalculado { get; set; }
+    private double altura;
+    private double peso;
+    private double? resultadoIMC;
+    private string classificacao = string.Empty;
 
-    private void CalcularImc()
+    private void CalcularIMC()
     {
-        ImcCalculado = Peso / Math.Pow(Altura, 2);
+        if (altura > 0 && peso > 0)
+        {
+            resultadoIMC = peso / (altura * altura);
+            classificacao = ClassificarIMC(resultadoIMC.Value);
+        }
+        else
+        {
+            resultadoIMC = null;
+            classificacao = string.Empty;
+        }
+    }
+
+    private string ClassificarIMC(double imc)
+    {
+        if (imc < 18.5) return "Abaixo do peso";
+        if (imc < 25) return "Peso normal";
+        if (imc < 30) return "Sobrepeso";
+        if (imc < 35) return "Obesidade grau I";
+        if (imc < 40) return "Obesidade grau II";
+        return "Obesidade grau III";
+    }
+
+    private string CorClassificacao(string categoria)
+    {
+        return categoria switch
+        {
+            "Peso normal" => "lightgreen",
+            "Sobrepeso" => "orange",
+            "Abaixo do peso" => "gold",
+            "Obesidade grau I" => "orangered",
+            "Obesidade grau II" => "red",
+            "Obesidade grau III" => "darkred",
+            _ => "white"
+        };
     }
 }
