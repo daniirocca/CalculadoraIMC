@@ -140,3 +140,27 @@ button {
     background-color: #161b22;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+
+.card-resultado {
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin-top: 1rem;
+}
+
+    .card-resultado p {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+
+.imc-valor {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.imc-classificacao {
+    font-size: 1.1rem;
+}

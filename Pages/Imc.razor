@@ -12,12 +12,12 @@
 
 @if (resultadoIMC != null)
 {
-    <div class="resultado">
-        <p><strong>IMC:</strong> @resultadoIMC.Value.ToString("0.00")</p>
-        <p style="color:@CorClassificacao(classificacao)">
-            <strong>Classificação:</strong> @classificacao
-        </p>
-    </div>
+<div class="card-resultado" style="border-left: 6px solid @CorClassificacao(classificacao)">
+    <p class="imc-valor">📊 <strong>IMC:</strong> @resultadoIMC.Value.ToString("0.00")</p>
+    <p class="imc-classificacao">
+        @IconeClassificacao(classificacao) <strong>@classificacao</strong>
+    </p>
+</div>
 }
 
 @code {
@@ -61,6 +61,20 @@
             "Obesidade grau II" => "red",
             "Obesidade grau III" => "darkred",
             _ => "white"
+        };
+    }
+
+    private string IconeClassificacao(string categoria)
+    {
+        return categoria switch
+        {
+            "Peso normal" => "✅",
+            "Abaixo do peso" => "⚠️",
+            "Sobrepeso" => "🔶",
+            "Obesidade grau I" => "🔴",
+            "Obesidade grau II" => "🟥",
+            "Obesidade grau III" => "🚨",
+            _ => "ℹ️"
         };
     }
 }
