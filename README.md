@@ -1,32 +1,60 @@
-<h1> Sobre o Projeto</h1>
+# 💡 Calculadora de IMC - Blazor Server
 
-<p>
-    Esta aplicação foi desenvolvida como uma <strong>Calculadora de IMC</strong> (Índice de Massa Corporal) utilizando <strong>Blazor Server</strong>,
-    uma tecnologia  da Microsoft para construir aplicações web interativas com C#.
-</p>
+Esta é uma aplicação web desenvolvida com **Blazor Server** para calcular o **IMC (Índice de Massa Corporal)** a partir da altura e peso informados pelo usuário.
 
-<h3> Objetivo</h3>
-<p>
-    Fornecer uma ferramenta simples e eficaz para o cálculo do IMC com base na altura e no peso informados pelo usuário.
-</p>
+> Prefer English? [Click here to read in English](https://github.com/daniirocca/CalculadoraIMC/blob/master/README.en.md)
 
-<h3> Funcionalidades</h3>
-<ul>
-    <li>Entrada de altura (em metros) e peso (em quilogramas)</li>
-    <li>Cálculo automático do IMC</li>
-    <li>Interface com tema escuro e visual moderno</li>
-    <li>Layout responsivo com menu lateral</li>
-</ul>
+---
 
-<h3> Tecnologias Utilizadas</h3>
-<ul>
-    <li>Blazor Server (.NET)</li>
-    <li>C#</li>
-    <li>HTML e CSS personalizados (Dark Theme)</li>
-</ul>
+## 🚀 Funcionalidades
 
-<p>
-    Este projeto tem fins educacionais e demonstra o potencial do Blazor para desenvolvimento de aplicações web modernas, com C# rodando diretamente no navegador (via WebAssembly) ou no servidor.
-</p>
+- Cálculo do IMC em tempo real
+- Classificação com base em diretrizes de saúde
+- Interface moderna com **tema escuro azul**
+- Exibição de resultado com card colorido
+- Navegação por menu lateral
+- Interface responsiva e interativa
 
-<p><em>Feito com 💙</em></p>
+---
+
+## 🧰 Tecnologias Utilizadas
+
+- .NET (Blazor Server)
+- C#
+- Componentes Razor
+- HTML + CSS customizado (Dark Theme)
+
+---
+
+## 📌 Objetivo
+
+Este projeto foi desenvolvido com fins educacionais, e demonstra na prática como:
+
+- Estruturar uma aplicação Blazor Server
+- Trabalhar com componentes, eventos e `@bind`
+- Aplicar lógica condicional e estilização dinâmica
+- Criar experiências visuais e responsivas com Razor e CSS
+
+---
+
+## 📈 Melhorias Futuras (Ideias)
+
+- Histórico de cálculos realizados
+- Exibição de gráficos (evolução do IMC ao longo do tempo)
+- Recomendações de saúde com base no IMC
+- Suporte a múltiplos idiomas
+
+---
+
+## 🧑‍💻 Como rodar o projeto
+
+```bash
+# Requisitos: .NET 6 ou superior
+
+# Clonar o repositório
+git clone https://github.com/seu-usuario/calculadora-imc-blazor.git
+cd calculadora-imc-blazor
+
+# Restaurar dependências e executar
+dotnet restore
+dotnet run
