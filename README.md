@@ -1,4 +1,4 @@
-# 💡 Calculadora de IMC - Blazor Server
+# Calculadora de IMC - Blazor Server
 
 Esta é uma aplicação web desenvolvida com **Blazor Server** para calcular o **IMC (Índice de Massa Corporal)** a partir da altura e peso informados pelo usuário.
 
@@ -6,18 +6,18 @@ Esta é uma aplicação web desenvolvida com **Blazor Server** para calcular o *
 
 ---
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
 - Cálculo do IMC em tempo real
 - Classificação com base em diretrizes de saúde
-- Interface moderna com **tema escuro azul**
+- Interface com tema **dark blue**
 - Exibição de resultado com card colorido
 - Navegação por menu lateral
 - Interface responsiva e interativa
 
 ---
 
-## 🧰 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - .NET (Blazor Server)
 - C#
@@ -26,7 +26,7 @@ Esta é uma aplicação web desenvolvida com **Blazor Server** para calcular o *
 
 ---
 
-## 📌 Objetivo
+##  Objetivo
 
 Este projeto foi desenvolvido com fins educacionais, e demonstra na prática como:
 
@@ -37,7 +37,7 @@ Este projeto foi desenvolvido com fins educacionais, e demonstra na prática com
 
 ---
 
-## 📈 Melhorias Futuras (Ideias)
+##  Melhorias Futuras
 
 - Histórico de cálculos realizados
 - Exibição de gráficos (evolução do IMC ao longo do tempo)
@@ -52,8 +52,8 @@ Este projeto foi desenvolvido com fins educacionais, e demonstra na prática com
 # Requisitos: .NET 6 ou superior
 
 # Clonar o repositório
-git clone https://github.com/seu-usuario/calculadora-imc-blazor.git
-cd calculadora-imc-blazor
+git clone https://github.com/daniirocca/CalculadoraIMC
+cd CalculadoraIMC
 
 # Restaurar dependências e executar
 dotnet restore
