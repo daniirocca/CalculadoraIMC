@@ -1,4 +1,4 @@
-# 💡 BMI Calculator - Blazor Server
+#  BMI Calculator - Blazor Server
 
 This is a web application built with **Blazor Server** to calculate the **BMI (Body Mass Index)** based on user-provided height and weight.
 
@@ -6,7 +6,7 @@ This is a web application built with **Blazor Server** to calculate the **BMI (B
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Real-time BMI calculation
 - Classification based on official health guidelines
@@ -16,7 +16,7 @@ This is a web application built with **Blazor Server** to calculate the **BMI (B
 
 ---
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 - .NET (Blazor Server)
 - C#
@@ -25,7 +25,7 @@ This is a web application built with **Blazor Server** to calculate the **BMI (B
 
 ---
 
-## 📌 Purpose
+##  Purpose
 
 This project was developed for educational purposes and serves as a base for learning how to:
 
@@ -36,7 +36,7 @@ This project was developed for educational purposes and serves as a base for lea
 
 ---
 
-## 📈 Future Improvements (Ideas)
+##  Future Improvements (Ideas)
 
 - Store calculation history
 - Add visual charts (IMC over time)
