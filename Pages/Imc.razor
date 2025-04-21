@@ -12,89 +12,9 @@
 
 @if (resultadoIMC != null)
 {
-<div class="card-resultado" style="border-left: 6px solid @CorClassificacao(classificacao)">
-    <p class="imc-valor">📊 <strong>IMC:</strong> @resultadoIMC.Value.ToString("0.00")</p>
-    <p class="imc-classificacao">
-        @IconeClassificacao(classificacao) <strong>@classificacao</strong>
-    </p>
+    <div class="card-resultado" style="border-left: 6px solid @CorClassificacao(classificacao)">
+        <p class="imc-valor"><strong>IMC:</strong> @resultadoIMC.Value.ToString("0.00")</p>
+        <p class="imc-classificacao"><strong>Classificação:</strong> @classificacao</p>
         <p class="imc-recomendacao"><strong>Recomendação:</strong> @recomendacao</p>
-</div>
-}
-
-@code {
-    private double altura;
-    private double peso;
-    private double? resultadoIMC;
-    private string classificacao = string.Empty;
-
-    private void CalcularIMC()
-    {
-        if (altura > 0 && peso > 0)
-        {
-            resultadoIMC = peso / (altura * altura);
-            classificacao = ClassificarIMC(resultadoIMC.Value);
-            recomendacao = ObterRecomendacao(classificacao); // ← ADICIONE ESTA LINHA
-        }
-        else
-        {
-            resultadoIMC = null;
-            classificacao = string.Empty;
-            recomendacao = string.Empty;
-        }
-    }
-
-
-    private string ClassificarIMC(double imc)
-    {
-        if (imc < 18.5) return "Abaixo do peso";
-        if (imc < 25) return "Peso normal";
-        if (imc < 30) return "Sobrepeso";
-        if (imc < 35) return "Obesidade grau I";
-        if (imc < 40) return "Obesidade grau II";
-        return "Obesidade grau III";
-    }
-
-    private string CorClassificacao(string categoria)
-    {
-        return categoria switch
-        {
-            "Peso normal" => "lightgreen",
-            "Sobrepeso" => "orange",
-            "Abaixo do peso" => "gold",
-            "Obesidade grau I" => "orangered",
-            "Obesidade grau II" => "red",
-            "Obesidade grau III" => "darkred",
-            _ => "white"
-        };
-    }
-
-    private string IconeClassificacao(string categoria)
-    {
-        return categoria switch
-        {
-            "Peso normal" => "✅",
-            "Abaixo do peso" => "⚠️",
-            "Sobrepeso" => "🔶",
-            "Obesidade grau I" => "🔴",
-            "Obesidade grau II" => "🟥",
-            "Obesidade grau III" => "🚨",
-            _ => "ℹ️"
-        };
-    }
-
-    private string recomendacao = string.Empty;
-    private string ObterRecomendacao(string categoria)
-    {
-        return categoria switch
-        {
-            "Abaixo do peso" => "Busque orientação nutricional para ganhar peso de forma saudável.",
-            "Peso normal" => "Mantenha hábitos saudáveis com alimentação equilibrada e atividade física.",
-            "Sobrepeso" => "Reduza o consumo de alimentos ultraprocessados e pratique exercícios regularmente.",
-            "Obesidade grau I" => "Reavalie seus hábitos alimentares e consulte um profissional de saúde.",
-            "Obesidade grau II" => "Requer atenção médica especializada para controle de peso e prevenção de doenças.",
-            "Obesidade grau III" => "Procure acompanhamento médico contínuo para tratar possíveis comorbidades.",
-            _ => string.Empty
-        };
-    }
-
+    </div>
 }
