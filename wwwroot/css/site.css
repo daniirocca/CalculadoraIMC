@@ -164,3 +164,9 @@ button {
 .imc-classificacao {
     font-size: 1.1rem;
 }
+
+.imc-recomendacao {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #aab8c2;
+}
