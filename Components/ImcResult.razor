@@ -1,0 +1,12 @@
+﻿@code {
+    [Parameter] public double Imc { get; set; }
+    [Parameter] public string Classificacao { get; set; } = string.Empty;
+    [Parameter] public string Recomendacao { get; set; } = string.Empty;
+    [Parameter] public string Cor { get; set; } = "white";
+}
+
+<div class="card-resultado" style="border-left: 6px solid @Cor">
+    <p class="imc-valor"><strong>IMC:</strong> @Imc.ToString("0.00")</p>
+    <p class="imc-classificacao"><strong>Classificação:</strong> @Classificacao</p>
+    <p class="imc-recomendacao"><strong>Recomendação:</strong> @Recomendacao</p>
+</div>

@@ -1,0 +1,23 @@
+﻿@code {
+    private double altura;
+    private double peso;
+
+    [Parameter]
+    public EventCallback<(double altura, double peso)> OnSubmit { get; set; }
+
+    private async Task HandleSubmit()
+    {
+        await OnSubmit.InvokeAsync((altura, peso));
+    }
+}
+
+
+<div class="formulario">
+    <label>Altura (em metros):</label>
+    <input type="number" @bind="altura" step="0.01" min="0" />
+
+    <label>Peso (em kg):</label>
+    <input type="number" @bind="peso" step="0.1" min="0" />
+
+    <button @onclick="HandleSubmit">Calcular</button>
+</div>

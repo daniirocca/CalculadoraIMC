@@ -1,20 +1,11 @@
 ﻿<h1>Calculadora de IMC</h1>
 
-<div class="formulario">
-    <label>Altura (em metros):</label>
-    <input type="number" @bind="altura" step="0.01" min="0" />
+<ImcForm OnSubmit="HandleSubmit" />
 
-    <label>Peso (em kg):</label>
-    <input type="number" @bind="peso" step="0.1" min="0" />
-
-    <button @onclick="CalcularIMC">Calcular</button>
-</div>
-
-@if (resultadoIMC != null)
+@if (ResultadoIMC.HasValue)
 {
-    <div class="card-resultado" style="border-left: 6px solid @CorClassificacao(classificacao)">
-        <p class="imc-valor"><strong>IMC:</strong> @resultadoIMC.Value.ToString("0.00")</p>
-        <p class="imc-classificacao"><strong>Classificação:</strong> @classificacao</p>
-        <p class="imc-recomendacao"><strong>Recomendação:</strong> @recomendacao</p>
-    </div>
+    <ImcResult Imc="ResultadoIMC.Value"
+               Classificacao="Classificacao"
+               Recomendacao="Recomendacao"
+               Cor="@ImcService.ObterCor(Classificacao)" />
 }
