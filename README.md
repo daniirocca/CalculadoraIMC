@@ -41,7 +41,6 @@ Este projeto foi desenvolvido com fins educacionais, e demonstra na prática com
 
 - Histórico de cálculos realizados
 - Exibição de gráficos (evolução do IMC ao longo do tempo)
-- Recomendações de saúde com base no IMC
 - Suporte a múltiplos idiomas
 
 ---
