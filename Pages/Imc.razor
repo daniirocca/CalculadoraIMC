@@ -4,8 +4,9 @@
 
 @if (ResultadoIMC.HasValue)
 {
-    <ImcResult Imc="ResultadoIMC.Value"
-               Classificacao="Classificacao"
-               Recomendacao="Recomendacao"
+    <ImcResult Imc="@ResultadoIMC.Value"
+               Classificacao="@Classificacao"
+               Recomendacao="@Recomendacao"
                Cor="@ImcService.ObterCor(Classificacao)" />
+
 }
