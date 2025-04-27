@@ -1,0 +1,15 @@
+{
+  "Title": "BMI Calculator",
+  "HeightLabel": "Height (in meters):",
+  "WeightLabel": "Weight (in kg):",
+  "ButtonLabel": "Calculate",
+  "ImcLabel": "BMI",
+  "ClassificationLabel": "Classification",
+  "RecommendationLabel": "Recommendation",
+  "Underweight": "Underweight",
+  "NormalWeight": "Normal weight",
+  "Overweight": "Overweight",
+  "ObesityGrade1": "Obesity Grade I",
+  "ObesityGrade2": "Obesity Grade II",
+  "ObesityGrade3": "Obesity Grade III"
+}

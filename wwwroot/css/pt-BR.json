@@ -1,0 +1,15 @@
+{
+  "Title": "Calculadora de IMC",
+  "HeightLabel": "Altura (em metros):",
+  "WeightLabel": "Peso (em kg):",
+  "ButtonLabel": "Calcular",
+  "ImcLabel": "IMC",
+  "ClassificationLabel": "Classificação",
+  "RecommendationLabel": "Recomendação",
+  "Underweight": "Abaixo do peso",
+  "NormalWeight": "Peso normal",
+  "Overweight": "Sobrepeso",
+  "ObesityGrade1": "Obesidade grau I",
+  "ObesityGrade2": "Obesidade grau II",
+  "ObesityGrade3": "Obesidade grau III"
+}
