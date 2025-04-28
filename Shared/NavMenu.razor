@@ -8,19 +8,19 @@
 
 <div class="top-row ps-3 navbar navbar-dark bg-dark">
     <div class="container-fluid">
-        @* <a class="navbar-brand" href="">Calculadora IMC</a> *@
         <button class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
 
-<div class="@NavMenuCssClass nav-scrollable bg-dark text-white p-3">
+<div class="@NavMenuCssClass nav-scrollable bg-dark text-white p-3 d-flex flex-column justify-content-between" style="height: 100vh;">
     <nav class="nav flex-column">
-@*         <NavLink class="nav-link text-white" href="counter">Counter</NavLink>
-        <NavLink class="nav-link text-white" href="fetchdata">Fetch data</NavLink> *@
         <NavLink href="/" class="nav-link" Match="NavLinkMatch.All">Home</NavLink>
         <NavLink href="about" class="nav-link" Match="NavLinkMatch.Prefix">About</NavLink>
-
     </nav>
+
+    <div class="language-selector-container mt-3">
+        <LanguageSelector />
+    </div>
 </div>

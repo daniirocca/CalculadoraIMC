@@ -1,0 +1,37 @@
+@inject ITranslator Translator
+@inject IJSRuntime JS
+
+<div class="language-selector">
+    <label class="language-label">Idioma</label>
+    <select @onchange="ChangeLanguage" class="language-select">
+        <option value="pt-BR">Portugues (BR)</option>
+        <option value="en-US">English (US)</option>
+    </select>
+</div>
+
+@code {
+    private bool _initialized = false;
+
+    private async Task ChangeLanguage(ChangeEventArgs e)
+    {
+        var selectedCulture = e.Value?.ToString() ?? "pt-BR";
+        Translator.SetCulture(selectedCulture);
+
+        await JS.InvokeVoidAsync("localStorage.setItem", "selectedCulture", selectedCulture);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !_initialized)
+        {
+            var savedCulture = await JS.InvokeAsync<string>("localStorage.getItem", "selectedCulture");
+            if (!string.IsNullOrEmpty(savedCulture))
+            {
+                Translator.SetCulture(savedCulture);
+                await InvokeAsync(StateHasChanged);
+            }
+            _initialized = true;
+        }
+    }
+}
