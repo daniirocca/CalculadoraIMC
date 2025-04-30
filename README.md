@@ -37,11 +37,16 @@ Este projeto foi desenvolvido com fins educacionais, e demonstra na prática com
 
 ---
 
+##  Em desenvolvimento
+
+- Suporte a múltiplos idiomas
+
+---
+
 ##  Melhorias Futuras
 
 - Histórico de cálculos realizados
 - Exibição de gráficos (evolução do IMC ao longo do tempo)
-- Suporte a múltiplos idiomas
 
 ---
 
